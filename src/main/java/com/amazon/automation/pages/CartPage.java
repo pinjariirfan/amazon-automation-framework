@@ -33,7 +33,8 @@ public class CartPage extends BasePage {
     }
 
     public List<String> getItemTitles() {
-        return findAll(itemTitles).stream().map(WebElement::getText).map(String::trim).toList();
+        return findAll(itemTitles).stream().map(WebElement::getText).map(String::trim)
+                .filter(t -> !t.isEmpty()).distinct().toList();
     }
 
     public String getSubtotal() {

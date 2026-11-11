@@ -1,11 +1,11 @@
 # Amazon Automation Framework
 
-End-to-end UI automation for **amazon.com** using **Selenium WebDriver (Java)**, **TestNG**, **Maven** and the **Page Object Model**.
+End-to-end UI automation for **Amazon** (default **amazon.in**, delivery PIN 560068 – Bommanahalli / HSR Layout, Bengaluru; amazon.com also supported) using **Selenium WebDriver (Java)**, **TestNG**, **Maven** and the **Page Object Model**.
 
 ## Flow covered
 
-1. Open amazon.com and verify the home page loads
-2. Set a US delivery ZIP (so products are shippable and show *Add to Cart*)
+1. Open Amazon and verify the home page loads
+2. Set the delivery PIN/ZIP code (so products are deliverable and show *Add to Cart*)
 3. Search for a product (`search.keyword`)
 4. Open a product from the results and **add it to the cart**
 5. Open the cart and verify the item and subtotal
@@ -63,9 +63,9 @@ Screenshots of each step (and of failures) go to `screenshots/`. TestNG reports 
 
 | Key | Default | Description |
 |-----|---------|-------------|
-| `base.url` | `https://www.amazon.com` | Site under test |
+| `base.url` | `https://www.amazon.in` | Site under test (`https://www.amazon.com` also works) |
 | `search.keyword` | `wireless mouse` | Product to search |
-| `delivery.zip` | `10001` | US ZIP used as the delivery location |
+| `delivery.zip` | `560068` | Delivery PIN code (amazon.in) or US ZIP (amazon.com, e.g. `10001`) |
 | `max.products.to.try` | `6` | Results to try until one can be added to the cart |
 | `browser` | `chrome` | `chrome`, `edge` or `firefox` |
 | `headless` | `false` | Run without a visible browser |
