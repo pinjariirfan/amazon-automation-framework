@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Amazon Automation Suite" verbose="1">
+    <listeners>
+        <listener class-name="com.amazon.automation.listeners.TestListener"/>
+    </listeners>
+    <test name="Amazon End-to-End: Search, Add to Cart, Checkout">
+        <classes>
+            <class name="com.amazon.automation.tests.AddToCartCheckoutTest"/>
+        </classes>
+    </test>
+</suite>
